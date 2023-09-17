@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+hiiii<!DOCTYPE html>
 <html>
 <head>
     <title>Login Form</title>
@@ -31,12 +31,17 @@
         </div>
     </form>
         <script>
-        document.getElementById("signup-form").addEventListener("submit", function(event) {
-
-            event.preventDefault();
-
-            window.location.href = "https://magnus.jalatechnologies.com/Home/Index";
-        });
+        const form = document.querySelector('form');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const email = document.querySelector('input[name="email"]').value;
+  const password = document.querySelector('input[name="password"]').value;
+  if (email === 'training@jalaacademy.com' && password === 'jobprogram') {
+    window.location.href = 'https://magnus.jalatechnologies.com/Home/Index';
+  } else {
+    alert('Invalid email or password');
+  }
+});
     </script>
 </div>
 </body>
